@@ -17,7 +17,23 @@ class ListDisplay extends Component {
   render() {
     return (
       <div>
-        <pre id="json">{JSON.stringify(this.state.cartList, null, 2)}</pre>
+        <table>
+          <tr>
+            <th>Item Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Amount</th>
+          </tr>
+          {this.state.cartList.map(item => (
+            <tr>
+              <td>{item.name}</td>
+              <td>{item.description}</td>
+              <td>{item.price}</td>
+              <td>{item.amount}</td>
+            </tr>
+          ))}
+        </table>
+        {/* <pre id="json">{JSON.stringify(this.state.cartList, null, 2)}</pre> */}
       </div>
     );
   }
