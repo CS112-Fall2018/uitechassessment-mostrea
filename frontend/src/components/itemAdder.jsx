@@ -38,8 +38,7 @@ class ItemAdder extends Component {
   render() {
     return (
       <div>
-        <p>Shit fam</p>
-        <h3>what now</h3>
+        <h3>Add a new item to the cart</h3>
 
         <form onSubmit={this.handleSubmit}>
           <label>

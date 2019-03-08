@@ -18,20 +18,22 @@ class ListDisplay extends Component {
     return (
       <div>
         <table>
-          <tr>
-            <th>Item Name</th>
-            <th>Description</th>
-            <th>Price</th>
-            <th>Amount</th>
-          </tr>
-          {this.state.cartList.map(item => (
+          <tbody>
             <tr>
-              <td>{item.name}</td>
-              <td>{item.description}</td>
-              <td>{item.price}</td>
-              <td>{item.amount}</td>
+              <th>Item Name</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Amount</th>
             </tr>
-          ))}
+            {this.state.cartList.map(item => (
+              <tr key={item.id}>
+                <td>{item.name}</td>
+                <td>{item.description}</td>
+                <td>{item.price}</td>
+                <td>{item.amount}</td>
+              </tr>
+            ))}
+          </tbody>
         </table>
         {/* <pre id="json">{JSON.stringify(this.state.cartList, null, 2)}</pre> */}
       </div>
