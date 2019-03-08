@@ -1,15 +1,20 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route, Link, Redirect } from "react-router-dom";
 
-const HomePage = () => {
-  return (
-    <div>
-      <h2>Shopping Cart Home Page</h2>
-      <a href="https://www.youtube.com/watch?v=XaCrQL_8eMY">
-        For your consideration
-      </a>
-    </div>
-  );
-};
+class HomePage extends Component {
+  render() {
+    return (
+      <div>
+        <h2>Shopping Cart Home Page</h2>
+        <button>
+          <Link to="/list">View Cart</Link>
+        </button>
+        <button>
+          <Link to="/item/add">Add Item</Link>
+        </button>
+      </div>
+    );
+  }
+}
 
 export default HomePage;
